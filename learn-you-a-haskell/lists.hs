@@ -13,4 +13,6 @@ take 5 (['b', 'a'..])
   Prelude> take 100 (['b', 'a'..])
   "ba`_^]\\[ZYXWVUTSRQPONMLKJIHGFEDCBA@?>=<;:9876543210/.-,+*)('&%$#\"! \US\RS\GS\FS\ESC\SUB\EM\CAN\ETB
   \SYN\NAK\DC4\DC3\DC2\DC1\DLE\SI\SO\r\f\v\n\t\b\a\ACK\ENQ\EOT\ETX\STX\SOH\NUL"
+  Prelude> (==) (maxBound :: Char) (head (reverse ['a'..]))
+  True
 -}
