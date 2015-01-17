@@ -36,6 +36,7 @@ instance Swoopable [[[Char]]] where
 -- "ABCDEFGHI"
 
 
+
 {-
 toWrapper :: Wrapper -> String
 toWrapper x = x
