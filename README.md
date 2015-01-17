@@ -1,2 +1,2 @@
-# haskellementary
-Introductory exercises in Haskell
+# Introductory exercises in Haskell
+
