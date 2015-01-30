@@ -100,4 +100,8 @@ numLongChains :: Int
 numLongChains = length (filter isLong (map chain [1..100]))  
   where isLong xs = length xs > 15  
 
+invoke :: a -> (a -> a) -> a
+invoke x f = f x
+-- *Main> take 5 (map (invoke 3) (map (*) [1..]))
+-- [3,6,9,12,15]
 
