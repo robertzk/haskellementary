@@ -75,3 +75,29 @@ take' n (x:xs) =  x:take' (n-1) xs
 reverse' :: [a] -> [a]
 reverse' [] = []
 reverse' (x:xs) = (reverse' xs) ++ [x]
+
+fn :: (Num a) => a -> a
+fn = (+1)
+
+flip' :: (a -> b -> c) -> (b -> a -> c)
+flip' fn x y = fn y x
+
+collatz :: Integer -> Integer -> [Integer]
+collatz n x
+  | n <= 0 = []
+  | n == 1 && odd x = [3 * x + 1]
+  | n == 1 && even x = [x `div` 2]
+  | otherwise = [next] ++ (collatz (n-1) next)
+  where next = head (collatz 1 x)
+
+chain :: (Integral a) => a -> [a]
+chain 1 = [1]
+chain x
+ | odd x  = x : chain (3 * x + 1)
+ | even x = x : chain (x `div` 2)
+
+numLongChains :: Int  
+numLongChains = length (filter isLong (map chain [1..100]))  
+  where isLong xs = length xs > 15  
+
+
