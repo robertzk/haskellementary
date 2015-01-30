@@ -105,3 +105,8 @@ invoke x f = f x
 -- *Main> take 5 (map (invoke 3) (map (*) [1..]))
 -- [3,6,9,12,15]
 
+sumit :: Integer
+sumit = foldl (\x y -> x + 2*y) 0 [1..5]
+
+-- Folds are just a dumb name for Reduce
+let reduce x y z = foldl x z y
