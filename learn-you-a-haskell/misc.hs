@@ -64,3 +64,14 @@ instance Element a => String [a] where
 --swoop ["abc", "cde", "omfg"]
 -- "abccdeomfg"
 
+-- A re-implementation of take
+take' :: (Ord a, Num a) => a -> [b] -> [b]
+take' n _
+   | n <= 0 = []
+take' _ []   = []
+take' n (x:xs) =  x:take' (n-1) xs
+
+-- A re-implementation of reverse
+reverse' :: [a] -> [a]
+reverse' [] = []
+reverse' (x:xs) = (reverse' xs) ++ [x]
