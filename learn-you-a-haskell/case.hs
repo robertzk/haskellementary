@@ -6,3 +6,4 @@ doit x =
       return 5
     Just foo -> do
       return foo
+
