@@ -110,3 +110,4 @@ sumit = foldl (\x y -> x + 2*y) 0 [1..5]
 
 -- Folds are just a dumb name for Reduce
 let reduce x y z = foldl x z y
+
