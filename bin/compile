@@ -1,0 +1,1 @@
+ghc scraps/$1.hs -o scraps/$1.hsx
